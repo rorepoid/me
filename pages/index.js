@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 
-const Index = () => (
+const Home = () => (
   <Layout>
     <div className='main'>
       <p><span className='badge badge-primary'>Hi 👋, I'm Roberto Orellana</span>, a backend developer currently working at <a href='#' className='default-link'>Grupo La República Publicaciones</a> in Lima - Perú.</p>
@@ -10,4 +10,4 @@ const Index = () => (
   </Layout>
 )
 
-export default Index
+export default Home

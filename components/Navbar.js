@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Navbar = () => (
-  <header className='header'>
+  <header className='header' role='heading'>
     <nav className='nav'>
       <Link href='/'>
         <a className='logo'>rorepoid</a>
