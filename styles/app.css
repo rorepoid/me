@@ -1,3 +1,63 @@
+:root {
+  --ff-default: "IBM Plex Sans", sans-serif;
+  --max-width: 65rem;
+}
+
 body {
-    background-color: #e1e1db;
+  background-color: #e1e1db;
+  font-size: 1.2rem;
+  font-family: var(--ff-default);
+}
+
+.logo {
+  text-decoration: none;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header {
+  display: block;
+  position: sticky;
+  top: 0;
+  background-color: #e1e1db;
+}
+.nav {
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  max-width: var(--max-width);
+  align-items: center;
+}
+
+.footer {
+  text-align: center;
+  color: #9f9c99;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: var(--max-width);
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.default-link {
+    text-decoration: none;
+    color: #2b79a2;
+}
+
+.badge {
+    border-radius: 0.2rem;
+    color: #FFFFFF;
+    background-color: #7a7878;
+}
+
+.badge-primary {
+    background-color: #6392ac;
+}
+
+.badge-red {
+    background-color: #cf757c;
 }

@@ -1,6 +1,8 @@
 const Footer = () => (
   <>
-    <h1>Footer</h1>
+    <footer className='footer'>
+      © {new Date().getFullYear()} Roberto Orellana. All Rights Reserved.
+    </footer>
   </>
 )
 
