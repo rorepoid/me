@@ -6,6 +6,9 @@ const Navbar = () => (
       <Link href='/'>
         <a className='logo'>rorepoid</a>
       </Link>
+      <Link href='/posts'>
+        <a className='page-link'>posts</a>
+      </Link>
     </nav>
   </header>
 )
