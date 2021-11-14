@@ -48,6 +48,16 @@ body {
     color: #2b79a2;
 }
 
+.default-link::after {
+  background: transparent url('https://developer.mozilla.org/static/media/external.e091ac5d.svg') 0 0 no-repeat;
+  background-size: 16px;
+  content: "";
+  height: 16px;
+  margin-left: 3px;
+  width: 16px;
+  display: inline-block;
+}
+
 .badge {
     border-radius: 0.2rem;
     color: #FFFFFF;
@@ -68,7 +78,16 @@ body {
 }
 
 .page-link {
-    margin: 0 0 0 auto;
     text-decoration: none;
     color: #3f3e3c;
+}
+
+.favorite-vocaloid-img {
+  height: 15rem;
+}
+
+.navbar-menu {
+  margin: 0 0 0 auto;
+  display: flex;
+  gap: 1em;
 }
