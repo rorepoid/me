@@ -18,6 +18,6 @@ describe('When user go to liked songs view', () => {
     expect(title).toBeInTheDocument()
     expect(url).toBeInTheDocument()
     expect(url).toHaveAttribute('href')
-    expect(url).toHaveTextContent('Escuchar')
+    expect(url).toHaveTextContent('Listen')
   })
 })

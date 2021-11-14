@@ -10,7 +10,7 @@ const LikedSongs = () => (
       {songs.map((song, index) => (
         <div key={index}>
           <h2>{song.title}</h2>
-          <a className='default-link' href={song.url} target='_blank' title={song.title} rel='noreferrer'>Escuchar</a>
+          <a className='default-link' href={song.url} target='_blank' title={song.title} rel='noreferrer'>Listen</a>
         </div>
       ))}
     </div>
