@@ -9,7 +9,7 @@ const Blog = ({ posts }) => (
         {posts.map((post) => (
           <li key={post.id}>
             <Link href={post.canonical_url}>
-              <a className='default-link'>{post.title}</a>
+              <a className='default-link' target='_blank'>{post.title}</a>
             </Link>
             <p className='metadata'> Published: {new Date(post.published_at).toLocaleDateString()}</p>
           </li>
