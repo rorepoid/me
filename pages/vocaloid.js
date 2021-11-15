@@ -7,7 +7,7 @@ const Vocaloid = () => (
       <h1>About</h1>
       <p>
         Vocaloid can have many meanings: a voice synthesizer software, a
-        voicebank or the trademark name and the general name for a franchise.
+        voicebank, a character, the trademark name or the general name for a franchise.
       </p>
       <p>My current favorite vocaloid is Gumi.</p>
       <img
