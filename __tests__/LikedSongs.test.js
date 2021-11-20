@@ -8,12 +8,14 @@ jest.mock('../src/SongsRepository')
 
 const songs = [
   {
-    title: 'Humanly',
-    url: 'https://youtube.com'
+    title: 'Solar System Disco',
+    url: 'https://youtu.be/CXmhBCc2lEg',
+    thumbUrl: 'https://i.ytimg.com/vi/CXmhBCc2lEg/hq720.jpg'
   },
   {
-    title: 'Melt',
-    url: 'https://youtube.com'
+    title: 'Humanly',
+    url: 'https://www.youtube.com/watch?v=0qY9rsBAKPk',
+    thumbUrl: 'https://i.ytimg.com/vi/0qY9rsBAKPk/hq720.jpg'
   }
 ]
 
@@ -30,7 +32,10 @@ describe('When user go to liked songs view', () => {
       name: 'Humanly'
     })
 
+    const songThumb = songCard.querySelector('img')
+
     expect(songCard).toBeInTheDocument()
+    expect(songThumb).toBeInTheDocument()
 
     songsRepository.getAll.mockReset()
   })

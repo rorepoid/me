@@ -18,14 +18,14 @@ const LikedSongs = ({ songsRepository }) => {
       <div>
         {songs.map((song, index) => (
           <div key={index}>
-            <h2>{song.title}</h2>
             <a
-              className='default-link'
               target='_blank'
               rel='noreferrer'
               href={song.url}
               title={song.title}
-            >Listen
+            >
+              <h4 className='default-link'>{song.title}</h4>
+              <img src={song.thumbUrl} alt={song.title} />
             </a>
           </div>
         ))}

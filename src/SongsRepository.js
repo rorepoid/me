@@ -11,7 +11,8 @@ export default class SongsRepository {
 
     return response.data.items.map(item => ({
       title: item.song.name,
-      url: item.song.pvs.find(pv => pv.service === 'Youtube').url
+      url: item.song.pvs.find(pv => pv.service === 'Youtube').url,
+      thumbUrl: item.song.pvs.find(pv => pv.service === 'Youtube').thumbUrl
     }))
   }
 }
