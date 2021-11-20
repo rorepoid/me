@@ -1,5 +1,8 @@
 import Layout from 'components/Layout'
 import LikedSongs from 'components/LikedSongs'
+import SongsRepository from '../src/SongsRepository'
+
+const songsRepository = new SongsRepository()
 
 const Vocaloid = () => (
   <Layout>
@@ -27,7 +30,7 @@ const Vocaloid = () => (
         important one for me, because after reading its lyrics (subtitles), I
         really started to feel a lot of emotions about vocaloid and vocalo-P's.
       </p>
-      <LikedSongs />
+      <LikedSongs songsRepository={songsRepository} />
     </div>
   </Layout>
 )

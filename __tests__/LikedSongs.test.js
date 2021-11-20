@@ -1,23 +1,37 @@
-/* global describe, it, expect */
+/* global describe, it, expect, jest */
 
-import { render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
+import SongsRepository from '../src/SongsRepository'
 import LikedSongs from '../components/LikedSongs'
 
+jest.mock('../src/SongsRepository')
+
+const songs = [
+  {
+    title: 'Humanly',
+    url: 'https://youtube.com'
+  },
+  {
+    title: 'Melt',
+    url: 'https://youtube.com'
+  }
+]
+
 describe('When user go to liked songs view', () => {
-  it('Show first 10 of my favorite songs', () => {
-    const songs = [{
-      title: 'Humanly',
-      url: 'https://youtube.com'
-    }]
+  it('Show first some of my favorite songs', async () => {
+    const songsRepository = new SongsRepository()
+    songsRepository.getAll.mockResolvedValue(songs)
 
-    render(<LikedSongs />)
+    await act(async () => {
+      render(<LikedSongs songsRepository={songsRepository} />)
+    })
 
-    const title = screen.getByText(songs[0].title)
-    const url = screen.getByTitle(songs[0].title)
+    const songCard = screen.getByRole('link', {
+      name: 'Humanly'
+    })
 
-    expect(title).toBeInTheDocument()
-    expect(url).toBeInTheDocument()
-    expect(url).toHaveAttribute('href')
-    expect(url).toHaveTextContent('Listen')
+    expect(songCard).toBeInTheDocument()
+
+    songsRepository.getAll.mockReset()
   })
 })
