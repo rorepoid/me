@@ -24,10 +24,10 @@ jobs:
             ${{ runner.os }}-
 
       - name: 🚧 Install dependencies
-        run: npm install
+        run: make deps
 
       - name: ✅ Run the tests
-        run: npm run test:ci
+        run: make test-ci
 
       - name: ➕ Job Context
         env:
