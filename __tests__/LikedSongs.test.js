@@ -25,7 +25,7 @@ describe('When user go to liked songs view', () => {
     songsRepository.getAll.mockResolvedValue(songs)
 
     await act(async () => {
-      render(<LikedSongs songsRepository={songsRepository} />)
+      render(<LikedSongs songs={songs} />)
     })
 
     const songCard = screen.getByRole('link', {

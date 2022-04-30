@@ -1,17 +1,4 @@
-import { useEffect, useState } from 'react'
-
-const showLikedSongs = async (repository, setSongs) => {
-  const songs = await repository.getAll()
-  setSongs(songs)
-}
-
-const LikedSongs = ({ songsRepository }) => {
-  const [songs, setSongs] = useState([])
-
-  useEffect(() => {
-    showLikedSongs(songsRepository, setSongs)
-  }, [])
-
+const LikedSongs = ({ songs }) => {
   return (
     <section>
       <h1>Vocaloid songs I like</h1>
