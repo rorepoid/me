@@ -7,6 +7,9 @@ deps: ## Install dependencies
 start: ## Start the server
 	@npm run dev
 
+build: ## Build the server
+	@npm run build
+
 test: ## Run the test for local
 	@npm run test
 
