@@ -2,9 +2,7 @@ import Layout from 'components/Layout'
 import LikedSongs from 'components/LikedSongs'
 import SongsRepository from '../src/SongsRepository'
 
-const songsRepository = new SongsRepository()
-
-const Vocaloid = () => (
+const Vocaloid = ({ songs }) => (
   <Layout>
     <div className='main'>
       <h1>About</h1>
@@ -30,9 +28,19 @@ const Vocaloid = () => (
         important one for me, because after reading its lyrics (subtitles), I
         really started to feel a lot of emotions about vocaloid and vocalo-P's.
       </p>
-      <LikedSongs songsRepository={songsRepository} />
+      <LikedSongs songs={songs} />
     </div>
   </Layout>
 )
+
+export const getStaticProps = async () => {
+  const songsRepository = new SongsRepository()
+  const songs = await songsRepository.getAll()
+  return {
+    props: {
+      songs
+    }
+  }
+}
 
 export default Vocaloid
