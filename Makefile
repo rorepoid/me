@@ -4,7 +4,7 @@ help: ## Prints this help.
 deps: ## Install dependencies
 	@npm install
 
-start: ## Start the server
+dev: ## Start the server in development mode
 	@npm run dev
 
 build: ## Build the server
